@@ -9,8 +9,7 @@
     "gulp": "gulp",
     "watch": "gulp watched",
     "clean": "gulp clean",
-    "dist": "gulp dist",
-    "deploy": "yarn gh-pages -d dist"
+    "dist": "gulp dist"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
@@ -35,8 +34,5 @@
     "sass": "^1.55.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  },
-  "dependencies": {
-    "@picocss/pico": "^1.5.6"
   }
 }
