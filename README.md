@@ -1,1 +1,3 @@
-# hustle-castle-portal-calc
+# HUSTLE CASTLE CALC
+![alt text](src/assets/images/logo.jpg)
+## Portal Soul Calculator for Hustle Castle game

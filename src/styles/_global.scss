@@ -1,0 +1,58 @@
+html {
+  height: 100%;
+  color: #bdc1c6;
+}
+
+body {
+  min-height: 100%;
+  background: #0b0b0d url("../images/hustle-level-bg.jpg") no-repeat center 50%/cover;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.centered-form{
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.calc-header{
+  text-align: center;
+  font-family: 'Limerick-Serial', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  overflow: hidden;
+  h1{
+    font-size: 48px;
+    margin-bottom: 0;
+  }
+}
+
+.form {
+  margin-bottom: 0;
+}
+
+.calc-label {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4px;
+}
+
+.calc-label + .calc-label {
+  margin-top: 6px;
+}
+
+.calc-label span {
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+
+.calc-item input,
+.calc-item select {
+  font-size: 16px;
+  font-weight: normal;
+  background-color: #bdc1c6;
+  border-radius: 4px;
+}
