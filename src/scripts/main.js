@@ -31,7 +31,7 @@ const formChangeHandler = () => {
 
     if (appleForBattle && needBattles) {
         resultElement.innerText = `
-        Need apple for battle: ${appleForBattle || ''}\n                
+        Need apples for battle: ${appleForBattle || ''}\n                
         Need battles: ${(isFinite(needBattles) ? needBattles : '') || ''}\n
     `
     }
