@@ -7,7 +7,8 @@ import {
 } from './utils';
 
 const form = document.getElementById("calc");
-const resultElement = document.getElementById("result");
+const resultApples = document.getElementById("resultApples");
+const resultBattles = document.getElementById("resultBattles");
 
 const {
     needSoulInp,
@@ -30,10 +31,8 @@ const formChangeHandler = () => {
     const needBattles  = Math.ceil((needSoulInp.value - availableSoulInp.value) / soulPerBattleWithBonuses);
 
     if (appleForBattle && isFinite(needBattles)) {
-        resultElement.innerText = `
-        Need apple for battles: ${appleForBattle * needBattles}\n                
-        Need battles: ${needBattles}\n
-    `
+        resultApples.innerText = String(appleForBattle * needBattles);
+        resultBattles.innerText = String(needBattles);
     }
 }
 

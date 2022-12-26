@@ -56,3 +56,20 @@ body {
   background-color: #bdc1c6;
   border-radius: 4px;
 }
+
+.calc-footer {
+  font-size: 12px;
+  color: #4a4441;
+  text-align: center;
+  padding-top: 28px;
+  p {
+    margin: 0;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+.form-result{
+  font-size: 14px;
+}
