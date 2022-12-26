@@ -29,10 +29,10 @@ const formChangeHandler = () => {
 
     const needBattles  = Math.ceil((needSoulInp.value - availableSoulInp.value) / soulPerBattleWithBonuses);
 
-    if (appleForBattle && needBattles) {
+    if (appleForBattle && isFinite(needBattles)) {
         resultElement.innerText = `
-        Need apples for battle: ${appleForBattle || ''}\n                
-        Need battles: ${(isFinite(needBattles) ? needBattles : '') || ''}\n
+        Need apple for battles: ${appleForBattle * needBattles}\n                
+        Need battles: ${needBattles}\n
     `
     }
 }
