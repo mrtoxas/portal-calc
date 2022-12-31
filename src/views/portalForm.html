@@ -1,10 +1,10 @@
-<form id="calc" class="form">
+<form id="calc" class="calc-form">
     <label class="calc-label calc-item">
         <span>Souls required:</span>
         <input type="number" name="needSoulInp" value="0">
     </label>
     <label class="calc-label calc-item">
-        <span>Available souls:</span>
+        <span>Existing souls:</span>
         <input type="number" name="availableSoulInp" value="0">
     </label>
     <label class="calc-label calc-item">
@@ -139,7 +139,7 @@
         </select>
     </label>
     <label class="calc-label calc-item">
-        <span>Soul catcher:</span>
+        <span>Soul Catcher:</span>
         <select name="soulCatcherSel">
             <option value="0"></option>
             <option value="2">x2</option>
@@ -147,7 +147,7 @@
         </select>
     </label>
     <label class="calc-label calc-item">
-        <span>Soul flag (lvl):</span>
+        <span>Banner of Souls (lvl):</span>
         <select name="soulBannerSel">
             <option value="0"></option>
             <option value="5">1</option>
@@ -164,7 +164,7 @@
         </select>
     </label>
     <label class="calc-label calc-item">
-        <span>Hunters quarter (lvl):</span>
+        <span>Hunters neighborhood (lvl):</span>
         <select name="soulQuarterSel">
             <option value="0"></option>
             <option value="4">1</option>
@@ -173,9 +173,10 @@
             <option value="9">6 / 7</option>
         </select>
     </label>
+    <div class="form-result">
+        <p>Need apples for battles: <span id="resultApples"></span></p>
+        <p>Need battles: <span id="resultBattles"></span></p>
+    </div>
 </form>
 
-<div class="form-result">
-    <p>Need apples for battles: <span id="resultApples"></span></p>
-    <p>Need battles: <span id="resultBattles"></span></p>
-</div>
+

@@ -1,76 +1,23 @@
 html {
   height: 100%;
   color: #bdc1c6;
+  font-size: 14px;
 }
 
 body {
+  display: grid;
+  grid-template-rows: 1fr;
   min-height: 100%;
-  background: #0b0b0d url("../images/hustle-level-bg.jpg") no-repeat center 50%/cover;
+  background: #0b0b0d url("../images/hustle-level-bg.jpg") no-repeat;
+  background-size: cover;
 }
 
 .container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
   padding: 0 16px;
-}
-
-.centered-form{
-  max-width: 600px;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
-  padding-top: 20px;
-}
-
-.calc-header{
-  text-align: center;
-  font-family: 'Limerick-Serial', sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  overflow: hidden;
-  h1{
-    font-size: 48px;
-    margin-bottom: 0;
-  }
-}
-
-.form {
-  margin-bottom: 0;
-}
-
-.calc-label {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 4px;
-}
-
-.calc-label + .calc-label {
-  margin-top: 6px;
-}
-
-.calc-label span {
-  font-size: 14px;
-  padding-bottom: 2px;
-}
-
-.calc-item input,
-.calc-item select {
-  font-size: 16px;
-  font-weight: normal;
-  background-color: #bdc1c6;
-  border-radius: 4px;
-}
-
-.calc-footer {
-  font-size: 12px;
-  color: #4a4441;
-  text-align: center;
-  padding-top: 28px;
-  padding-bottom: 20px;
-  p {
-    margin: 0;
-  }
-  a {
-    color: inherit;
-  }
-}
-
-.form-result {
-  font-size: 14px;
 }
