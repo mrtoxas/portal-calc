@@ -45,5 +45,5 @@ const preparedFromLocalStorage = () => {
     if (storageData.hasOwnProperty('soulQuarterBonus')) soulQuarterSel.value = storageData.soulQuarterBonus;
 }
 
-form.addEventListener("change", formChangeHandler, false);
+form.addEventListener("input", formChangeHandler, false);
 document.addEventListener('DOMContentLoaded', preparedFromLocalStorage, false);

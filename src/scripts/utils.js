@@ -1,11 +1,11 @@
 export const getSoulFloorDefault = (elem) => {
     const selectedItem = Array.from(elem).find((item) => item.value === elem.value);
-    return Number(selectedItem.dataset.reward);
+    return Number(selectedItem.dataset.reward.replaceAll(' ', ''));
 }
 
 export const getAppleForBattle = (elem) => {
     const selectedItem = Array.from(elem).find((item) => item.value === elem.value);
-    return Number(selectedItem.dataset.apple);
+    return Number(selectedItem.dataset.apple.replaceAll(' ', ''));
 }
 
 export const getSoulCatcherBonus = (elem, soulPerBattle) => {
