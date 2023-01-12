@@ -8,7 +8,16 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   min-height: 100vh;
-  background: #0b0b0d url("../images/hustle-level-bg.jpg") no-repeat 50%/cover;
+  background-color: #0b0b0d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 767px) {
+    background-image: url("../images/hustle-level-bg-mobile.jpg");
+  }
+  @media (min-width: 768px) {
+    background-image: url("../images/hustle-level-bg.jpg");
+  }
 }
 
 .container {
