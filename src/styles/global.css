@@ -1,0 +1,47 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: 0, 0, 0;
+  --color-primary-300: #baf4f6;
+  --color-primary-400: #94e6eb;
+  --color-primary-500: #00bbca;
+  --color-primary-600: #007986;
+  --color-text-primary: #444445;
+  --color-green-300: #89fd58;
+  --color-green-400: #5cf11b;
+  --color-green-450: #00d200;
+  --color-green-500: #00a500;
+  --color-green-550: #00c100;
+  --color-green-600: #1f8c3c;
+}
+
+@font-face {
+  font-family: "limerick-extraboldregular";
+  src: url("../assets/fonts/limerick_extrabold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/limerick_extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "limerick-demiboldregular";
+  src: url("../assets/fonts/limerick_demibold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/limerick_demibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "limerick-demiboldregular";
+  font-weight: 700;
+  color: var(--color-text-primary);
+  padding: 20px;
+  background: url(../assets/images/hustle-level-bg.jpg) top/cover no-repeat;
+}
+
+* {
+  box-sizing: border-box;
+}

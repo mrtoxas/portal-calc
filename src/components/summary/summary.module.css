@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+  margin-top: 0.6rem;
+  row-gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  background-color: #ade9e8;
+}
+
+.wrapper > div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  background-color: #cbf6f7;
+  color: #007485;
+}
+
+.wrapper > div > span {
+  color: white;
+  -webkit-text-stroke: 3px #424e4f;
+  paint-order: stroke fill;
+  outline: none;
+  text-indent: 0.1rem;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}

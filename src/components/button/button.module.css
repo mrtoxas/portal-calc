@@ -1,0 +1,96 @@
+.button {
+  position: relative;
+  height: 1.8rem;
+  min-width: 1.7rem;
+  appearance: none;
+  border: 0;
+  background-color: var(--color-green-500);
+  border-radius: 3px;
+  border: 1px solid var(--color-green-600);
+  border-radius: .3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0.14rem;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-green-400) 0%,
+    var(--color-green-400) 40%,
+    var(--color-green-550) 40%,
+    var(--color-green-550) 100%
+  );
+  border-radius: 0 0 0.4em 0.4em;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0.12rem;
+  height: 50%;
+  width: 100%;
+  background-color: var(--color-green-450);
+  border-radius: 0.3rem 0.3rem 0.25rem 0.25rem;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1rem;
+  -webkit-text-stroke: 2px var(--color-green-500);
+  paint-order: stroke fill;
+  text-indent: 0.1rem;
+  letter-spacing: 0.5px;
+  user-select: none;
+}
+
+.button svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  user-select: none;
+}
+
+.glare::after {
+  content: '';
+  position: absolute;
+  top: 0.02rem;
+  left: 0.05rem;
+  width: 0.24rem;
+  height: 0.13rem;
+  border-radius: 0.1rem;
+  z-index: 1;
+  background-color: white;
+  transform: rotate(-22deg);
+  filter: blur(0.2px);
+}
+
+.glare::before {
+  content: '';
+  position: absolute;
+  bottom: 0.16rem;
+  right: 0.14rem;
+  width: 0.16rem;
+  height: 0.09rem;
+  border-radius: 60% 60%;
+  z-index: 1;
+  background-color: var(--color-green-300);
+  transform: rotate(-26deg);
+  filter: blur(0.2px);
+}
+
+.button:active:after,
+.button:active:before {
+  display: none;
+}

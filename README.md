@@ -1,5 +1,1 @@
-# HUSTLE CASTLE CALC
-![game logo](src/assets/images/logo.jpg)
-## Portal Soul Calculator for Hustle Castle game
-
-### [Visit site](https://hustle-castle-calc.netlify.app/)
+\inter_regular.ttf montserrat_bold.ttf open_sans_bold.ttf roboto_medium_numbers.ttf
