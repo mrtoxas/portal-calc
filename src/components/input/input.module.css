@@ -13,13 +13,13 @@
 }
 
 .input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
   display: block;
   grid-column: 1 / 3;
   grid-row: 1;
   width: 100%;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
   height: 1.8rem;
   padding: 0 0.3rem;
   border-radius: 3px;
@@ -34,6 +34,9 @@
   outline: none;
   text-indent: 0.1rem;
   letter-spacing: 0.5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  letter-spacing: .05rem;
 }
 
 .clearBtn {
@@ -61,6 +64,11 @@
 }
 
 .label {
+  display: block;
   user-select: none;
   -webkit-user-select: none;
+  font-weight: 700 !important;
+  letter-spacing: -0.05rem !important;
+  font-size: 0.875rem;  
+  margin-bottom: .18rem;  
 }

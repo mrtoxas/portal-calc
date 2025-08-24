@@ -5,6 +5,7 @@ import styles from "./input.module.css";
 import IconPlus from "../icons/iconPlus";
 
 interface InputProps {
+  id: string;
   value: string;
   min?: number;
   max?: number;
@@ -16,7 +17,7 @@ interface InputProps {
 }
 
 export const Input = (props: InputProps) => {
-  const { value, min, max, defaultValue, quicklyValues, label, placeholder, onChange } =
+  const { id, value, min, max, defaultValue, quicklyValues, label, placeholder, onChange } =
     props;
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const currentValueRef = useRef(value);
@@ -80,7 +81,7 @@ export const Input = (props: InputProps) => {
 
   return (
     <div className={styles.wrapper}>
-      <label className={styles.label}>{label}</label>
+      <label className={styles.label} htmlFor={id}>{label}</label>
       <div className={styles.row}>
         <StepButton
           direction={"dec"}
@@ -92,6 +93,7 @@ export const Input = (props: InputProps) => {
 
         <div className={styles.inputContainer}>
           <input
+            id={id}
             className={styles.input}
             type="text"
             value={value}

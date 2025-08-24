@@ -14,32 +14,16 @@
   --color-green-600: #1f8c3c;
 }
 
-@font-face {
-  font-family: "limerick-extraboldregular";
-  src: url("../assets/fonts/limerick_extrabold-webfont.woff2") format("woff2"),
-    url("../assets/fonts/limerick_extrabold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "limerick-demiboldregular";
-  src: url("../assets/fonts/limerick_demibold-webfont.woff2") format("woff2"),
-    url("../assets/fonts/limerick_demibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
   height: 100%;
 }
 
 body {
-  font-family: "limerick-demiboldregular";
-  font-weight: 700;
   color: var(--color-text-primary);
   padding: 20px;
-  background: url(../assets/images/hustle-level-bg.jpg) top/cover no-repeat;
+  background: url(../assets/images/hustle-level-bg.jpg) top/cover no-repeat;  
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
 
 * {

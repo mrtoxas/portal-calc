@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Input } from "../input/input";
 import { Summary } from "../summary/summary";
 import { useSummaryCalc } from "../../hooks/useSummaryCalc";
+import { useLang } from "../../hooks/useLang";
+import styles from "./form.module.css";
 
 export interface CalcFormData {
   "required-souls": string;
@@ -23,6 +25,7 @@ const defaultFormData: CalcFormData = {
 
 export const Form = () => {
   const [сalcFormData, setCalcFormData] = useState<CalcFormData>(defaultFormData);
+  const { t } = useLang();
 
   useEffect(() => {
     const storage = localStorage.getItem("calcFormData");
@@ -34,11 +37,14 @@ export const Form = () => {
   const updateField = (fieldName: keyof CalcFormData) => (value: string) => {
     setCalcFormData((prev) => {
       const newFormData = { ...prev, [fieldName]: value };
-      localStorage.setItem("calcFormData", JSON.stringify({
-        ...newFormData, 
-        "required-souls": "",
-        "existing-souls": "",
-      }));
+      localStorage.setItem(
+        "calcFormData",
+        JSON.stringify({
+          ...newFormData,
+          "required-souls": "",
+          "existing-souls": "",
+        }),
+      );
       return newFormData;
     });
   };
@@ -46,23 +52,26 @@ export const Form = () => {
   const { apples, battles } = useSummaryCalc(сalcFormData) ?? { apples: 0, battles: 0 };
 
   return (
-    <div>
+    <div className={styles.form}>
       <Input
-        label="Souls required"
+        id="required-souls"
+        label={t("requiredSouls")}
         value={сalcFormData["required-souls"] ?? ""}
         onChange={updateField("required-souls")}
         defaultValue={defaultFormData["required-souls"]}
         min={1}
       />
       <Input
-        label="Existing souls"
+        id="existing-souls"
+        label={t("existingSouls")}
         value={сalcFormData["existing-souls"] ?? ""}
         onChange={updateField("existing-souls")}
         defaultValue={defaultFormData["existing-souls"]}
         min={0}
       />
       <Input
-        label="Farm floor"
+        id="farm-floor"
+        label={t("farmFloor")}
         value={сalcFormData["farm-floor"] ?? ""}
         onChange={updateField("farm-floor")}
         defaultValue={defaultFormData["farm-floor"]}
@@ -74,18 +83,19 @@ export const Form = () => {
         ]}
       />
       <Input
-        label="Banner of souls (lvl)"
+        id="soul-banner"
+        label={t("soulBanner")}
         value={сalcFormData["soul-banner"] ?? ""}
         onChange={updateField("soul-banner")}
         defaultValue={defaultFormData["soul-banner"]}
         min={1}
         max={11}
         quicklyValues={[{ name: "11", value: 11 }]}
-        placeholder="Нет"
       />
 
       <Input
-        label="Soul Catcher (multiplier)"
+        id="soul-catcher"
+        label={t("soulCatcher")}
         value={сalcFormData["soul-catcher"] ?? ""}
         onChange={updateField("soul-catcher")}
         defaultValue={defaultFormData["soul-catcher"]}
@@ -95,18 +105,17 @@ export const Form = () => {
           { name: "x2", value: 2 },
           { name: "x3", value: 3 },
         ]}
-        placeholder="Нет"
       />
 
       <Input
-        label="Hunters neighborhood (lvl)"
+        id="hunters-quarter"
+        label={t("huntersQuarter")}
         value={сalcFormData["hunters-quarter"] ?? ""}
         onChange={updateField("hunters-quarter")}
         defaultValue={defaultFormData["hunters-quarter"]}
         min={1}
         max={7}
         quicklyValues={[{ name: "7", value: 7 }]}
-        placeholder="Нет"
       />
 
       <Summary apples={apples} battles={battles} />

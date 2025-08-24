@@ -1,7 +1,7 @@
 .button {
   position: relative;
   height: 1.8rem;
-  min-width: 1.7rem;
+  min-width: 1.8rem;
   appearance: none;
   border: 0;
   background-color: var(--color-green-500);
@@ -15,6 +15,7 @@
   flex-shrink: 0;
   user-select: none;
   -webkit-user-select: none;
+  font-weight: 900;
 }
 
 .button::before {
@@ -59,7 +60,7 @@
   display: block;
   width: 14px;
   height: 14px;
-  user-select: none;
+  user-select: none;  
 }
 
 .glare::after {

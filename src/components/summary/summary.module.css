@@ -5,12 +5,13 @@
   padding: 0.5rem;
   border-radius: 0.4rem;
   background-color: #ade9e8;
+  font-weight: 700;
 }
 
 .wrapper > div {
   display: grid;
   grid-template-columns: 1fr auto;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0.4rem;
   border-radius: 0.4rem;
   background-color: #cbf6f7;
   color: #007485;
@@ -22,9 +23,7 @@
   paint-order: stroke fill;
   outline: none;
   text-indent: 0.1rem;
-  letter-spacing: 1px;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
+  letter-spacing: 1px;  
   font-weight: 800;
   font-style: normal;
 }

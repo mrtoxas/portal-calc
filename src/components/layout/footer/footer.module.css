@@ -1,0 +1,50 @@
+.footer {
+  display: grid;
+  row-gap: 0.3rem;
+  color: var(--color-white);
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #ccc;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 0.1rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.lang {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-flex;
+  column-gap: 0.3rem;
+  justify-content: center;
+}
+
+.lang li {
+  cursor: pointer;
+
+  &:not(:last-child)::after {
+    content: " |";
+  }
+}
+
+.lang li span {
+  text-underline-offset: 0.1rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.lang .active {
+  pointer-events: none;
+}
+
+.lang .active span {
+  text-decoration: underline;
+}
