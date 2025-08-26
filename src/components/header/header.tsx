@@ -1,4 +1,4 @@
-import { useLang } from "../../../hooks/useLang";
+import { useLang } from "../../hooks/useLang";
 import styles from "./header.module.css";
 
 export const Header = () => {

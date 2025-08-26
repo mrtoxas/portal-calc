@@ -1,23 +1,22 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import { translations, Lang, TranslationKey } from "./translations";
-import { useInitialLang } from "../hooks/useInitialLang";
 
 interface LangContextType {
   lang: Lang;
-  setLang: (lang: Lang) => void;
+  setLang: (lang: string) => void;
   t: (key: TranslationKey) => string;
 }
 
 export const LangContext = createContext<LangContextType | undefined>(undefined);
 
 export const LangProvider = ({ children }: { children: React.ReactNode }) => {
-  const [lang, setLang] = useState<Lang>(useInitialLang(translations, "en"));
+  const [lang, setLang] = useState<Lang>("ua");
 
-  useEffect(() => {
-    localStorage.setItem("lang", lang);
-  }, [lang]);
+  const safeSetLang = (lang: string) => {
+    setLang(lang in translations ? (lang as Lang) : "en");
+  };
 
   const t = (key: TranslationKey) => translations[lang][key];
 
-  return <LangContext.Provider value={{ lang, setLang, t }}>{children}</LangContext.Provider>;
+  return <LangContext.Provider value={{ lang, setLang: safeSetLang, t }}>{children}</LangContext.Provider>;
 };

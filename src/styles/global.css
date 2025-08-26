@@ -11,7 +11,7 @@
   --color-green-450: #00d200;
   --color-green-500: #00a500;
   --color-green-550: #00c100;
-  --color-green-600: #1f8c3c;
+  --color-green-600: #1f8c3c; 
 }
 
 html {
@@ -20,7 +20,7 @@ html {
 
 body {
   color: var(--color-text-primary);
-  padding: 20px;
+  padding: 0 20px;
   background: url(../assets/images/hustle-level-bg.jpg) top/cover no-repeat;  
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;

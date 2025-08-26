@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Input } from "../input/input";
+import { Input } from "../ui/input/input";
 import { Summary } from "../summary/summary";
 import { useSummaryCalc } from "../../hooks/useSummaryCalc";
 import { useLang } from "../../hooks/useLang";

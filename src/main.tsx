@@ -1,14 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App/App.tsx";
 import "normalize.css";
 import "./styles/global.css";
-import { BrowserRouter } from "react-router";
+import { LangProvider } from "./lang/langContent";
+import { AppRouter } from "./appRouter/appRouter";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <LangProvider>
+      <AppRouter /> 
+    </LangProvider>
   </StrictMode>,
 );

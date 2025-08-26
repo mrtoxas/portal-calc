@@ -34,8 +34,8 @@
   }
 }
 
-.lang li span {
-  text-underline-offset: 0.1rem;
+.lang li a {
+  text-underline-offset: 0.12rem;
   &:hover {
     text-decoration: underline;
   }
@@ -45,6 +45,6 @@
   pointer-events: none;
 }
 
-.lang .active span {
-  text-decoration: underline;
+.lang .active a {
+  font-weight: bold;
 }
