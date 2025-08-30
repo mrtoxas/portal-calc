@@ -1,5 +1,5 @@
-.head {
-  padding: 1.5rem 0 1.4rem;
+.head {  
+  padding: clamp(1.8rem, 2vw, 2rem) 0 clamp(1.4rem, 2vw, 1.8rem);
   color: var(--color-white);
   text-align: center;
 }

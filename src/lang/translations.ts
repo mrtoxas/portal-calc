@@ -1,4 +1,10 @@
-export type Lang = "ua" | "ru" | "en";
+export const langMap = {
+  ua: "uk",
+  en: "en",
+  ru: "ru",
+};
+
+export type Lang = keyof typeof langMap;
 
 export const translations: Record<Lang, Record<string, string>> = {
   ua: {
@@ -39,4 +45,4 @@ export const translations: Record<Lang, Record<string, string>> = {
   },
 } as const;
 
-export type TranslationKey = keyof typeof translations["ua"];
+export type TranslationKey = keyof (typeof translations)["ua"];

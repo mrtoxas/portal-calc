@@ -1,11 +1,9 @@
-
-import App from "../app/app";
-import { RootRedirect } from "../components/rootRedirect/rootRedirect";
+import App from "../App/App";
 
 export const routes = [
   {
-    path: "/",
-    element: <RootRedirect />, 
+    path: "/",   
+    element: <App />,
   },
   {
     path: "/:lang",

@@ -8,7 +8,7 @@ import { AppRouter } from "./appRouter/appRouter";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <LangProvider>
-      <AppRouter /> 
+      <AppRouter />
     </LangProvider>
   </StrictMode>,
 );

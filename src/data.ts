@@ -150,7 +150,7 @@ export const dataFloor: DataFllor[] = [
   { level: 133, apples: 104310, reward: 1047 },
   { level: 134, apples: 105240, reward: 1058 },
   { level: 135, apples: 106170, reward: 1069 },
-]
+];
 
 export const dataCatcher: DataCatcher[] = [
   { level: 1, value: 5 },
@@ -163,8 +163,8 @@ export const dataCatcher: DataCatcher[] = [
   { level: 8, value: 25 },
   { level: 9, value: 30 },
   { level: 10, value: 37 },
-  { level: 11, value: 44 }
-]
+  { level: 11, value: 44 },
+];
 
 export const dataQuarter: DataQuarter[] = [
   { level: 1, value: 4 },
@@ -174,4 +174,4 @@ export const dataQuarter: DataQuarter[] = [
   { level: 5, value: 7 },
   { level: 6, value: 9 },
   { level: 7, value: 9 },
-]
+];

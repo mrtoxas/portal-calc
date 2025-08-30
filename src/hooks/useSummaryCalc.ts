@@ -1,7 +1,7 @@
-import { useMemo } from "react"
-import { CalcFormData } from "../components/form/form"
-import { SummaryData } from "../components/summary/summary"
-import { DataCatcher, dataCatcher, dataFloor, DataQuarter, dataQuarter } from "../data"
+import { useMemo } from "react";
+import { CalcFormData } from "../components/form/form";
+import { SummaryData } from "../components/summary/summary";
+import { DataCatcher, dataCatcher, dataFloor, DataQuarter, dataQuarter } from "../data";
 
 export const useSummaryCalc = (сalcFormData: CalcFormData): SummaryData | undefined => {
   const getFieldValue = (field: keyof CalcFormData) => Number(сalcFormData[field] || 0);
@@ -19,6 +19,7 @@ export const useSummaryCalc = (сalcFormData: CalcFormData): SummaryData | undef
     const requiredSouls = getFieldValue("required-souls");
     const existingSouls = getFieldValue("existing-souls");
     if (!requiredSouls) return;
+    if (requiredSouls <= existingSouls) return;
 
     const catcherLevel = getFieldValue("soul-catcher");
     const bannerLevel = getFieldValue("soul-banner");
@@ -38,7 +39,7 @@ export const useSummaryCalc = (сalcFormData: CalcFormData): SummaryData | undef
       return {
         apples: appleForBattle * needBattles,
         battles: needBattles,
-      }
+      };
     }
-  }, [сalcFormData])
-}
+  }, [сalcFormData]);
+};

@@ -11,13 +11,7 @@ interface StepButtonInterface {
   onTouchEnd: () => void;
 }
 
-export const StepButton = ({
-  direction,
-  onMouseDown,
-  onMouseUp,
-  onMouseLeave,
-  onTouchEnd,
-}: StepButtonInterface) => {
+export const StepButton = ({ direction, onMouseDown, onMouseUp, onMouseLeave, onTouchEnd }: StepButtonInterface) => {
   const isTouch = useRef(false);
 
   const handleStart = useCallback(
@@ -32,7 +26,7 @@ export const StepButton = ({
         onMouseDown(direction);
       }
     },
-    [onMouseDown, direction]
+    [onMouseDown, direction],
   );
 
   const handleTouchEnd = useCallback(() => {
@@ -49,6 +43,7 @@ export const StepButton = ({
       onTouchEnd={handleTouchEnd}
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseLeave}
+      aria-label={direction === "dec" ? "minus" : "plus"}
     >
       {direction === "dec" && <IconMinus />}
       {direction === "inc" && <IconPlus />}

@@ -11,27 +11,21 @@ export default defineConfig({
     manifest: {
       name: 'Hastle Castle Portal Calc',
       short_name: 'Portal Calc',
-      description: 'Calculating the number of apples for the portal farm in the game Hustle Catsle',
+      description: 'Portal resources calculator for Hustle Castle',
       theme_color: '#000000',
-
-      icons: [{
-        src: 'pwa-64x64.png',
-        sizes: '64x64',
-        type: 'image/png',
-      }, {
-        src: 'pwa-192x192.png',
-        sizes: '192x192',
-        type: 'image/png',
-      }, {
-        src: 'pwa-512x512.png',
-        sizes: '512x512',
-        type: 'image/png',
-      }, {
-        src: 'maskable-icon-512x512.png',
-        sizes: '512x512',
-        type: 'image/png',
-        purpose: 'maskable',
-      }],
+      display: "standalone",
+      icons: [
+        {
+          "src": "/fav/web-app-manifest-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "/fav/web-app-manifest-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
     },
 
     workbox: {
