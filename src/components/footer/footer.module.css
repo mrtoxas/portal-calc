@@ -51,9 +51,9 @@
 
 .authorLink {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.12rem;
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
