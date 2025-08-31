@@ -21,7 +21,7 @@ export const Footer = () => {
       </ul>
       <div>{t("description")}</div>
       <div>
-        Made with &#10084;&#xFE0E; by <a className={styles.authorLink} href="https://github.com/mrtoxas/portal-calc">mrtoxas</a>, 2025
+        Made with &#10084;&#xFE0E; by mrtoxas — just for fun
       </div>
       <div></div>
     </footer>

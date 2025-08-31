@@ -1,6 +1,6 @@
 :root {
   --color-white: #ffffff;
-  --color-black: 0, 0, 0;
+  --color-black: rgb(0, 0, 0);
   --color-primary-300: #baf4f6;
   --color-primary-400: #94e6eb;
   --color-primary-500: #00bbca;
@@ -20,15 +20,21 @@
 
 html {
   height: 100dvh;
-  font-size: clamp(16px, 1.5vw, 18px);
+  font-size: 100%;
 }
 
-body { 
+html, body{
+  padding:0;
+  margin:0;
+}
+
+body {
   display: grid;
   grid-template-rows: 1fr;
   min-height: 100%;
   color: var(--color-text-primary);
-  padding: 0 20px;
+  padding-left: max(20px,env(safe-area-inset-left));
+  padding-right: max(20px,env(safe-area-inset-right));
   background: url(../assets/images/hustle-level-bg.jpg) top/cover no-repeat;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -39,4 +45,10 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   align-items: self-start;
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 112.5%;
+  }
 }
