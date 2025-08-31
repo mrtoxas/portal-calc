@@ -1,6 +1,6 @@
 :root {
   --color-white: #ffffff;
-  --color-black: 0, 0, 0;
+  --color-black: rgb(0, 0, 0);
   --color-primary-300: #baf4f6;
   --color-primary-400: #94e6eb;
   --color-primary-500: #00bbca;
@@ -20,10 +20,10 @@
 
 html {
   height: 100dvh;
-  font-size: clamp(16px, 1.5vw, 18px);
+  font-size: 100%;
 }
 
-body { 
+body {
   display: grid;
   grid-template-rows: 1fr;
   min-height: 100%;
@@ -39,4 +39,10 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   align-items: self-start;
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 112.5%;
+  }
 }
