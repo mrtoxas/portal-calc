@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { useLang } from "../../hooks/useLang";
 import { Lang, translations } from "../../lang/translations";
 import styles from "./footer.module.css";
+import { AuthorLink } from "../authorLink/authorLink";
 
 export const Footer = () => {
   const { t } = useLang();
@@ -21,7 +22,7 @@ export const Footer = () => {
       </ul>
       <div>{t("description")}</div>
       <div>
-        Made with &#10084;&#xFE0E; by mrtoxas — just for fun
+        Made with &#10084;&#xFE0E; by <AuthorLink /> — just for fun
       </div>
       <div></div>
     </footer>
