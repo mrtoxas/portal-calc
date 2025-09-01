@@ -3,6 +3,7 @@ import { useLang } from "../../hooks/useLang";
 import { Lang, translations } from "../../lang/translations";
 import styles from "./footer.module.css";
 import { AuthorLink } from "../authorLink/authorLink";
+import { CompatibilityMode } from "../compatibilityMode/compatibilityMode";
 
 export const Footer = () => {
   const { t } = useLang();
@@ -20,6 +21,9 @@ export const Footer = () => {
           );
         })}
       </ul>
+      <div>
+        <CompatibilityMode />
+      </div>
       <div>{t("description")}</div>
       <div>
         Made with &#10084;&#xFE0E; by <AuthorLink /> — just for fun

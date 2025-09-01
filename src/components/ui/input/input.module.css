@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   grid-template-columns: auto;
-  column-gap: .3rem;
+  column-gap: 0.3rem;
 }
 
 .inputContainer {
@@ -28,15 +28,17 @@
   border-width: 3px 1px 1px 1px;
   border-color: var(--color-primary-600);
   color: var(--color-white);
-  font-family: "limerick-demiboldregular";
-  -webkit-text-stroke: 4px var(--color-primary-600);
-  paint-order: stroke fill;
   outline: none;
   text-indent: 0.1rem;
   letter-spacing: 0.5px;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
+}
+
+:global(html:not(.compatibility-mode)) .input {
+  -webkit-text-stroke: 4px var(--color-primary-600);
+  paint-order: stroke fill;
 }
 
 .clearBtn {
@@ -60,7 +62,7 @@
   height: 0.8rem;
   transform: rotate(45deg);
   color: #9ce5ea;
-  margin-top: .15em;
+  margin-top: 0.15em;
 }
 
 .label {
@@ -69,6 +71,6 @@
   -webkit-user-select: none;
   font-weight: 700 !important;
   letter-spacing: -0.05rem !important;
-  font-size: 0.875rem;  
-  margin-bottom: .145rem;  
+  font-size: 0.875rem;
+  margin-bottom: 0.145rem;
 }

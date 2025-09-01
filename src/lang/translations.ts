@@ -18,6 +18,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     summaryApples: "Яблука",
     summaryBattles: "Битви",
     portalCalculator: "Портальний калькулятор",
+    compatibilityMode: "Режим сумісності"
   },
   en: {
     description: "Portal resources calculator for Hustle Castle",
@@ -30,6 +31,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     summaryApples: "Apples",
     summaryBattles: "Battles",
     portalCalculator: "Portal Calculator",
+    compatibilityMode: "Compatibility Mode"
   },
   ru: {
     description: "Калькулятор ресурсов портала для Hustle Castle",
@@ -42,6 +44,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     summaryApples: "Яблоки",
     summaryBattles: "Битвы",
     portalCalculator: "Портальный калькулятор",
+    compatibilityMode: "Режим совместимости"
   },
 } as const;
 

@@ -18,13 +18,16 @@
   color: #007485;
 }
 
-.wrapper > div > span {
+.wrapper > div > span {  
+  outline: none;
+  text-indent: 0.1rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+  font-style: normal;
+}
+
+:global(html:not(.compatibility-mode)) .wrapper > div > span {
   color: white;
   -webkit-text-stroke: 3px #424e4f;
   paint-order: stroke fill;
-  outline: none;
-  text-indent: 0.1rem;
-  letter-spacing: 1px;  
-  font-weight: 800;
-  font-style: normal;  
 }

@@ -11,10 +11,10 @@ export const Summary = ({ apples, battles }: SummaryData) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.row}>
-        {t('summaryApples')}: <span>{apples ? apples : "-"}</span>
+        {t('summaryApples')}: <span>{apples ? apples.toLocaleString("ru") : "-"}</span>
       </div>
       <div className={styles.row}>
-        {t('summaryBattles')}: <span>{battles ? battles : "-"}</span>
+        {t('summaryBattles')}: <span>{battles ? battles.toLocaleString("ru") : "-"}</span>
       </div>
     </div>
   );

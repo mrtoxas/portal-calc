@@ -1,0 +1,17 @@
+.icon {
+  font-weight: bold;
+}
+
+.button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+.button:hover .text {
+  text-decoration: underline;
+  cursor: pointer;
+}
