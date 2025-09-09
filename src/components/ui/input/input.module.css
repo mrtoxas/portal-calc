@@ -37,7 +37,7 @@
 }
 
 :global(html:not(.compatibility-mode)) .input {
-  -webkit-text-stroke: 4px var(--color-primary-600);
+  -webkit-text-stroke: 3px var(--color-primary-600);
   paint-order: stroke fill;
 }
 

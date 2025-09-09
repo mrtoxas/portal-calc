@@ -24,10 +24,11 @@
   letter-spacing: 1px;
   font-weight: 800;
   font-style: normal;
+  font-size: 1rem;
 }
 
 :global(html:not(.compatibility-mode)) .wrapper > div > span {
-  color: white;
-  -webkit-text-stroke: 3px #424e4f;
+  color: var(--color-white);
+  -webkit-text-stroke: 3px #007485;
   paint-order: stroke fill;
 }
